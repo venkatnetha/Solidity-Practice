@@ -1,0 +1,28 @@
+Always use the Checks Effects Interactions pattern.
+Use mutex on any function that you are unsure of.
+Watch out for cross-function and cross-contracts unsafe external calls.
+Verified and secure components != verified and secure system.
+…and always use the Checks Effects Interactions pattern.
+
+
+Because of an external call which is made during the transfer, malicious attackers can prepare a contract that will call the withdraw function again before updating their balance.
+
+How to protect yourself against reentrancy attack?
+Design functions based on the following principles – Checks Effects Interactions
+
+First – make all your checks,
+Then – make changes e.g. update balances,
+Finally – call another contract.
+CEI pattern will eliminate most of the problems, so try to always build the contract logic based on this scheme. Make all your checks first, then update balances and make changes, and only then call another contract.
+
+Use mutex – add nonReentrant modifier
+
+Use a ready-made implementation of nonReentrant modifier.
+Add nonReentrant modifier to all external functions.
+Go through all the functions and if you are sure that the vulnerability does not exist in a particular function, remove the modifier.
+If for some reason it is not possible / too complicated / expensive to use the CEI pattern. Consider adding a mutex to the functions containing external calls. After calling the function, it will be marked as “entered” and lock the state. It will not allow you to call any function that is marked as nonReentrant until the state will be released again.
+
+Remember not to treat mutexes as a silver bullet and do not exclude the option for presence of unsafe external calls in the case of integration with other smart contracts.
+
+To protect yourself from design and business logic bugs, the best you can do is constantly raise awareness among your developers and try to prevent vulnerabilities before the code comes out.
+

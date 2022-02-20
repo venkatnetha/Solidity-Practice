@@ -28,13 +28,12 @@
     Client application interacting with smart contracts that follow ERCs standards.
     <br />
     <br />
-    Build this project from stratch: https://youtu.be/92rnG1t_55I
+   
     <br />
-    <!--<a href="https://github.com/konytech/ethereum-ercs-demo">View Demo (WIP)</a>
-    ·-->
-    <a href="https://github.com/konytech/ethereum-ercs-demo/issues">Report Bug</a>
+  
+    <a href="https://github.com/venkatnetha/Solidity-Practice/edit/main/Solidity-ERC20Token-With-Frontend/issues">Report Bug</a>
     ·
-    <a href="https://github.com/konytech/ethereum-ercs-demo/issues">Request Feature</a>
+    <a href="https://github.com/venkatnetha/Solidity-Practice/edit/main/Solidity-ERC20Token-With-Frontend/issues">Request Feature</a>
     <br />
   </p>
 </div>
@@ -83,7 +82,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/konytech/ethereum-ercs-demo.git
+   git clone https://github.com/venkatnetha/Solidity-Practice/edit/main/Solidity-ERC20Token-With-Frontend/.git
    ```
 2. Install NPM packages
    ```sh
